@@ -11,5 +11,3 @@ def course_list(request):
         </ul>
     """)
 
-def welcome(request):
-    return HttpResponse("<h1>Welcome to GOA Singhum</h1>")

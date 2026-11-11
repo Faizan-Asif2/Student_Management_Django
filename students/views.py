@@ -34,3 +34,6 @@ def student_marks(request, student_id, marks):
         return HttpResponse("<h1>Pass</h1>")
     else:
         return HttpResponse("<h1>Fail</h1>")
+
+def welcome(request):
+    return HttpResponse("<h1>Welcome to GOA Singhum</h1>")
