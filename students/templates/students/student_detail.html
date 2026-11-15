@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ student.name }} | Student Details
+{% endblock %}
+
+{% block content %}
+
+<div class="detail-card">
+
+    <h1>{{ student.name|title }}</h1>
+
+    <p><strong>Student ID:</strong> {{ student.id }}</p>
+
+    <p><strong>Roll Number:</strong> {{ student.roll_no }}</p>
+
+    <p><strong>CGPA:</strong> {{ student.cgpa|floatformat:2 }}</p>
+
+    <p><strong>Department:</strong> {{ student.department }}</p>
+
+    <p><strong>About:</strong> {{ student.bio }}</p>
+
+    {% if student.cgpa >= 2.0 %}
+
+        <h3 class="passed">Academic Status: Passed</h3>
+
+    {% else %}
+
+        <h3 class="failed">Academic Status: Failed</h3>
+
+    {% endif %}
+
+    <a href="{% url 'students:student_list' %}" class="btn">
+        Back to Students
+    </a>
+
+</div>
+
+{% endblock %}

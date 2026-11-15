@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home | Student Portal
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>Welcome to Student Management System</h1>
+
+    <p>
+        Manage and explore student information
+        through a simple Django application.
+    </p>
+
+    <h2>Total Students: {{ total_students }}</h2>
+
+    <a href="{% url 'students:student_list' %}"
+       class="btn">
+        Explore Students
+    </a>
+
+</div>
+
+{% endblock %}
