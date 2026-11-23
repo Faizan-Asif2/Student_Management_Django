@@ -9,5 +9,7 @@ class Student(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['roll_no']
     def __str__(self):
         return f"{self.name} ({self.roll_no})"
